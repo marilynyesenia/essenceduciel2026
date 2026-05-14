@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Essence du Ciel</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    overflow-x:hidden;
+}
+
+.header{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:60px;
+    background:white;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    z-index:1000;
+}
+
+.icon{
+    font-size:22px;
+    cursor:pointer;
+}
+
+.seccion{
+    height:115vh;
+    width:100%;
+    position:absolute;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+#inicio{
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+    url("https://images.unsplash.com/photo-1594035910387-fea47794261f") center/cover no-repeat;
+    color:white;
+    height:100vh;
+}
+
+#sede, #colecciones, #p1, #p2, #p3, #p4, #p5, #p6, #p7, #p8, #p9, #nosotros, #redes, #carrito{
+    background:black;
+    color:white;
+}
+
+.caja{
+    background: rgba(0,0,0,0.6);
+    padding:25px;
+    border-radius:12px;
+    max-width:320px;
+}
+
+img{
+    width:140px;
+    border-radius:10px;
+    margin:10px;
+}
+
+button{
+    padding:10px 15px;
+    margin:5px;
+    cursor:pointer;
+    border:none;
+    border-radius:6px;
+    background:yellow;
+    color:black;
+    font-weight:bold;
+}
+
+button:hover{
+    transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="icon">🔍</div>
+    <div class="icon">👤</div>
+    <div class="icon">💎</div>
+    <div class="icon" onclick="ir(12)">🛒</div>
+</div>
+
+<div class="seccion" id="inicio">
+    <div class="caja">
+        <h1>ESSENCE DU CIEL</h1>
+        <p>Fragancias que inspiran elegancia</p>
+        <button onclick="ir(1)">Bienvenido</button>
+    </div>
+</div>
+
+<div class="seccion" id="sede">
+    <div class="caja">
+        <h2>Selecciona tu sede</h2>
+        <select>
+            <option>Ciudad de Guatemala</option>
+            <option>Antigua Guatemala</option>
+            <option>Quetzaltenango</option>
+            <option>Jutiapa</option>
+        </select>
+        <br>
+        <button onclick="ir(2)">Ver Colecciones</button>
+    </div>
+</div>
+
+<div class="seccion" id="colecciones">
+    <div class="caja">
+        <h2>Perfumes</h2>
+        <button onclick="ir(3)">1</button>
+        <button onclick="ir(4)">2</button>
+        <button onclick="ir(5)">3</button>
+        <button onclick="ir(6)">4</button>
+        <button onclick="ir(7)">5</button>
+        <button onclick="ir(8)">6</button>
+        <button onclick="ir(9)">7</button>
+        <button onclick="ir(10)">8</button>
+        <button onclick="ir(11)">9</button>
+    </div>
+</div>
+
+<div class="seccion" id="p1"><div class="caja">
+<h3>Primavera Floral DÈLICE</h3>
+<img src="PRIMAVERAFLORALDÉLICE.PNG.png">
+<p>Una fragancia luminosa y alegre que despierta los sentidos y acompaña tus días con suavidad.</p>
+<button onclick="agregarCarrito('Primavera',450)">Agregar</button>
+
+<h3>Aura Divina</h3>
+<img src="VERANO – AURA DIVINA.png">
+<p>Ligera y chispeante, ideal para los días soleados que pidan frescura y libertad.</p>
+<button onclick="agregarCarrito('Aura',500)">Agregar</button>
+
+<button onclick="ir(4)">Siguiente</button>
+</div></div>
+
+<div class="seccion" id="p2"><div class="caja">
+<h3>VERANO – ECLIPSE NOBLE</h3>
+<img src="VERANO – ECLIPSENOBLE.png">
+<p>Un soplo de frescura marina con un toque sofisticado, y relajante.</p>
+<button onclick="agregarCarrito('Eclipse',500)">Agregar</button>
+
+<h3>OTOÑO – ROUGE PASSION</h3>
+<img src="OTOÑO – ROUGE PASSION.png">
+<p>Apasionada y sofisticada, deja una huella inolvidable donde quiera que vayas.</p>
+<button onclick="agregarCarrito('Rouge',400)">Agregar</button>
+
+<button onclick="ir(5)">Siguiente</button>
+</div></div>
+
+<div class="seccion" id="p3"><div class="caja">
+<h3>OTOÑO – VANILLE NOIR</h3>
+<img src="OTOÑO – VANILLE NOIR.png">
+<p>Seductora y adictiva, perfecta para noches memorables.</p>
+<button onclick="agregarCarrito('Vanille',550)">Agregar</button>
+
+<h3>INVIERNO – AMBRE ROYAL</h3>
+<img src="INVIERNO – AMBRE ROYAL.png">
+<p>Seductora y adictiva, perfecta para noches memorables.</p>
+<button onclick="agregarCarrito('Ambre',480)">Agregar</button>
+
+<button onclick="ir(6)">Siguiente</button>
+</div></div>
+
+<div class="seccion" id="p4"><div class="caja">
+<h3>INVIERNO – OUD PRESTIGE</h3>
+<img src="INVIERNO – OUD PRESTIGE.png">
+<p>Una fragancia profunda y poderosa para quienes viven con carácter.</p>
+<button onclick="agregarCarrito('Oud',600)">Agregar</button>
+
+<div class="seccion" id="p5"><div class="caja">
+<h3>Acqua di Giò</h3>
+<img src="Acqua di Giò.png">
+<p>Notas Principales : Bergamota, neroli, jazmín, notas marinas.
+Estilo: Fresco y acuático.
+Ocasión: Día a dia, oficina, viajes y climas cálidos.</p>
+<button onclick="agregarCarrito('Rose',430)">Agregar</button>
+
+<h3>ESENCIA DE LUXEIEL</h3>
+<img src="ESENCIA DE LUXEIEL.png">
+<p>En Esencia de Luxeiel, cada perfume es una obra de arte creada para acompañarte en cada etapa de tu vida.</p>
+<button onclick="agregarCarrito('Luxeiel',620)">Agregar</button>
+
+<button onclick="ir(7)">Siguiente</button>
+</div></div>
+
+<h3>YSL Black Opium</h3>
+<img src="YSL Black Opium.png">
+<p>Notas Principales: Café, vainilla, flor de azahar, pachulí.
+Estilo: Moderno y adictivo.
+Ocasión: Noches de fiesta, salidas con amigas y eventos especiales.</p>
+<button onclick="agregarCarrito('Ocean',470)">Agregar</button>
+
+<button onclick="ir(8)">Siguiente</button>
+</div></div>
+
+<div class="seccion" id="p6"><div class="caja">
+<h3>Bleu de Chanel</h3>
+<img src="Bleu de Chanel.png">
+<p>Notas Principales: Limón, menta, jengibre, sándalo.
+Estilo: Masculino y sofisticado.
+Ocasión: Uso diario, reuniones importantes y eventos formales.</p>
+<button onclick="agregarCarrito('Diamond',700)">Agregar</button>
+
+<h3>Lancôme La Vie Est Bellet</h3>
+<img src="Lancôme La Vie Est Belle.png">
+<p>Notas Principales: Pera, iris, jazmín, praliné.
+Estilo: Dulce y elegante.
+Ocasión: Celebraciones, graduaciones y salidas especiales.</p>
+<button onclick="agregarCarrito('Silver',520)">Agregar</button>
+
+<button onclick="ir(9)">Siguiente</button>
+</div></div>
+
+<div class="seccion" id="p7"><div class="caja">
+<h3>Tom Ford Black Orchid</h3>
+<img src="Tom Ford Black Orchid.png">
+<p>Notas Principales: Orquídea negra, trufa, pachulí, vainilla.
+Estilo: Misterioso y sofisticado.
+Ocasión: Noches especiales, cenas elegantes y eventos exclusivos.</p>
+<button onclick="agregarCarrito('Night',540)">Agregar</button>
+
+<h3>Chanel N°5</h3>
+<img src="Chanel N°5.png">
+<p>Notas Principales: Aldehídos, rosa, jazmín, sándalo. 
+Estilo: Clásico, atemporal y sofisticado.
+Ocasión: Eventos elegantes, cenas
+Románticas y ocasiones especiales.</p>
+<button onclick="agregarCarrito('Sky',460)">Agregar</button>
+
+<button onclick="ir(10)">Siguiente</button>
+</div></div>
+
+<div class="seccion" id="p8"><div class="caja">
+<h3>Baccarat Rouge 540</h3>
+<img src="Baccarat Rouge 540.png">
+<p>Notas Principales: Jazmín, ámbar, madera, azafrán.
+Estilo: Exclusivo, moderno y lujoso.
+Ocasión: Cenas de gala, eventos VIP y ocasiones especiales.</p>
+<button onclick="agregarCarrito('Dark',610)">Agregar</button>
+
+<h3>Creed Aventus</h3>
+<img src="Creed Aventus.png">
+<p>Notas Principales: Piña, abedul, musgo, ámbar gris. 
+Estilo: Moderno, intenso y elegante.
+Ocasión: Reuniones importantes, fiestas elegantes y eventos formales.</p>
+<button onclick="agregarCarrito('Pink',490)">Agregar</button>
+
+<button onclick="ir(11)">Siguiente</button>
+</div></div>
+
+<div class="seccion" id="p9"><div class="caja">
+<h3>Dior J’adore</h3>
+<img src="Dior J’adore.png">
+<p>Notas Principales: Rosa, jazmín, pera, orquídea.
+Estilo: Floral y lujoso.
+Ocasión: Bodas, graduaciones y eventos nocturnos.</p>
+<button onclick="agregarCarrito('Crystal',530)">Agregar</button>
+
+<h3>Chanel Coco Mademoiselle</h3>
+<img src="Chanel Coco Mademoiselle.png">
+<p>Notas Principales: Naranja, rosa, jazmín, vainilla, pachulí.
+Estilo: Elegante, fino y femenino.
+Ocasión: Fiestas, reuniones formales, cenas especiales.</p>
+<button onclick="agregarCarrito('Golden',580)">Agregar</button>
+
+<button onclick="ir(12)">Nosotros</button>
+</div></div>
+
+<div class="seccion" id="nosotros">
+<div class="caja">
+<h2>Quiénes somos</h2>
+<p>Fragancias elegantes y únicas.</p>
+<button onclick="ir(13)">Redes</button>
+</div>
+</div>
+
+<div class="seccion" id="redes">
+<div class="caja">
+<h2>Redes</h2>
+<p>Instagram: ESSENCE_DU_CIEL</p>
+<p>Facebook: ESSENCE_DU_CIEL</p>
+<p>WhatsApp: 5444-9425</p>
+<button onclick="ir(14)">Carrito</button>
+</div>
+</div>
+
+<div class="seccion" id="carrito">
+<div class="caja">
+<h2>Carrito</h2>
+<ul id="listaCarrito"></ul>
+<p id="total">Total: Q0</p>
+<button onclick="ir(0)">Inicio</button>
+</div>
+</div>
+<script>
+let secciones = document.querySelectorAll(".seccion");
+let actual = 0;
+
+function actualizar(){
+    secciones.forEach((sec, i)=>{
+        sec.style.transform = "translateY(" + ((i - actual) * 100) + "vh)";
+        sec.style.opacity = (i === actual) ? "1" : "0";
+    });
+}
+actualizar();
+
+function ir(index){
+    actual = index;
+    actualizar();
+}
+
+let carrito = [];
+
+function agregarCarrito(nombre, precio){
+    carrito.push({nombre, precio});
+    actualizarCarrito();
+}
+
+function actualizarCarrito(){
+    let lista = document.getElementById("listaCarrito");
+    let total = document.getElementById("total");
+
+    lista.innerHTML = "";
+    let suma = 0;
+
+    carrito.forEach(item => {
+        let li = document.createElement("li");
+        li.textContent = item.nombre + " - Q" + item.precio;
+        lista.appendChild(li);
+        suma += item.precio;
+    });
+
+    total.textContent = "Total: Q" + suma;
+}
+</script>
+
+</body>
+</html>
